@@ -13125,11 +13125,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\gnetwork\\source\\repos\\CVSWebApp\\CVSWebApp\\CVSWebApp.csproj",
+      "projectUniqueName": "D:\\GITHUB\\REPOSITORIES\\CVSWebApp\\CVSWebApp\\CVSWebApp.csproj",
       "projectName": "CVSWebApp",
-      "projectPath": "C:\\Users\\gnetwork\\source\\repos\\CVSWebApp\\CVSWebApp\\CVSWebApp.csproj",
+      "projectPath": "D:\\GITHUB\\REPOSITORIES\\CVSWebApp\\CVSWebApp\\CVSWebApp.csproj",
       "packagesPath": "C:\\Users\\gnetwork\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gnetwork\\source\\repos\\CVSWebApp\\CVSWebApp\\obj\\",
+      "outputPath": "D:\\GITHUB\\REPOSITORIES\\CVSWebApp\\CVSWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
