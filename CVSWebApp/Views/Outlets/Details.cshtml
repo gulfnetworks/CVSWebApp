@@ -1,0 +1,37 @@
+﻿@model CVSWebApp.Models.Outlet
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Outlet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OutletName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OutletName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OutletAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OutletAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CountryId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CountryId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.OutletId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

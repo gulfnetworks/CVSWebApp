@@ -1,0 +1,73 @@
+﻿@model CVSWebApp.Models.Company
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>Company</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CompanyName" class="control-label"></label>
+                <input asp-for="CompanyName" class="form-control" />
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyAddress" class="control-label"></label>
+                <input asp-for="CompanyAddress" class="form-control" />
+                <span asp-validation-for="CompanyAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyContact" class="control-label"></label>
+                <input asp-for="CompanyContact" class="form-control" />
+                <span asp-validation-for="CompanyContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyLogoUrl" class="control-label"></label>
+                <input asp-for="CompanyLogoUrl" class="form-control" />
+                <span asp-validation-for="CompanyLogoUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyCode" class="control-label"></label>
+                <input asp-for="CompanyCode" class="form-control" />
+                <span asp-validation-for="CompanyCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedDate" class="control-label"></label>
+                <input asp-for="CreatedDate" class="form-control" />
+                <span asp-validation-for="CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExpiryDate" class="control-label"></label>
+                <input asp-for="ExpiryDate" class="form-control" />
+                <span asp-validation-for="ExpiryDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountryId" class="control-label"></label>
+                <select asp-for="CountryId" class ="form-control" asp-items="ViewBag.CountryId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TimeZone" class="control-label"></label>
+                <input asp-for="TimeZone" class="form-control" />
+                <span asp-validation-for="TimeZone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

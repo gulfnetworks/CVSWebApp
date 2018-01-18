@@ -1,0 +1,169 @@
+﻿@model CVSWebApp.Models.Survey
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Survey</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QualityRate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QualityRate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QualityComment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QualityComment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValueRate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValueRate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValueComment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValueComment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceRate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceRate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceComment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ServiceComment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AmbienceRate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AmbienceRate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AmbienceComment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AmbienceComment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecommendRate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecommendRate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecommendPoorArea)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecommendPoorArea)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecommendImprovements)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecommendImprovements)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RecommendSuggestions)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RecommendSuggestions)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastVisit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastVisit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastVisitComment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastVisitComment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Action)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Action)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MobileNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MobileNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CheckNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TableNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TableNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Outlet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Outlet.OutletId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserManager)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserManager.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserStaff)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserStaff.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SurveyId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

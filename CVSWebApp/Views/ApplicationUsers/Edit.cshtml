@@ -1,0 +1,144 @@
+﻿@model CVSWebApp.Models.ApplicationUserViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Account</h2>
+
+<h4>User Information</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div class="row">
+                <div class="col-md-4">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MobileNo" class="control-label"></label>
+                    <input asp-for="MobileNo" class="form-control" />
+                    <span asp-validation-for="MobileNo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ManagerId" class="control-label"></label>
+                    <input asp-for="ManagerId" class="form-control" />
+                    <span asp-validation-for="ManagerId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CompanyId" class="control-label"></label>
+                    <select asp-for="CompanyId" class="form-control" asp-items="ViewBag.CompanyId"></select>
+                    <span asp-validation-for="CompanyId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Active" class="control-label"></label>
+                    <input asp-for="Active" class="form-control" />
+                    <span asp-validation-for="Active" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UserOutletId" class="control-label"></label>
+                    <input asp-for="UserOutletId" class="form-control" />
+                    <span asp-validation-for="UserOutletId" class="text-danger"></span>
+                </div>
+                <input type="hidden" asp-for="Id" />
+                </div>
+            </div>
+            <h4> <br/> Access Information</h4>
+            <hr />
+
+            <div class="row" id="divAccessInfo">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="UserRole" class="control-label"></label>
+                        <select asp-for="UserRole" class="form-control" asp-items="ViewBag.UserRole"></select>
+                    </div>
+                </div>
+            </div>
+        
+                <h4 > <br/><input type="checkbox" value="" id="chkLoginInfo" />  Login Information</h4>
+                <hr />
+           <div class="row" id="divLoginInfo">
+                <div class="col-md-4">
+                
+                    <div class="form-group">
+                        <label asp-for="UserName" class="control-label text-muted"></label>
+                        <input asp-for="UserName" class="form-control disabled" disabled />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="text-muted"></label>
+                        <input asp-for="Password" class="form-control disabled" disabled/>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ConfirmPassword"  class="text-muted"></label>
+                        <input asp-for="ConfirmPassword" class="form-control" disabled />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+       
+                </div>
+            </div>
+   
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+
+        function ExcludeLoginInformation(value) {
+            if (value) {
+
+                $("#divLoginInfo")
+                    .removeClass("text-muted")
+                    .find("input, label")
+                    .removeAttr("disabled")
+                    .removeClass("disabled")
+                    .removeClass("text-muted")
+                    .removeProp("disabled");
+
+                $("#divLoginInfo").find("input").slice(1).rules('add', 'required');
+
+            }
+            else {
+                $("#divLoginInfo").addClass("text-muted")
+                $("#divLoginInfo").find("label").addClass("text-muted");
+                $("#divLoginInfo").find("input").prop("disabled", true);
+                $("#divLoginInfo").find("input").slice(1).val("").rules('remove', 'required');
+            }
+
+        }
+
+
+        $(function () {
+            ExcludeLoginInformation(false);
+
+            $("#chkLoginInfo").on("change", function () { 
+                ExcludeLoginInformation($(this).prop("checked"));
+            });
+        });
+
+    </script>
+
+}

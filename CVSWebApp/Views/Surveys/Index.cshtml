@@ -1,0 +1,180 @@
+﻿@model IEnumerable<CVSWebApp.Models.Survey>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.QualityRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.QualityComment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ValueRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ValueComment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServiceComment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AmbienceRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AmbienceComment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RecommendRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RecommendPoorArea)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RecommendImprovements)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RecommendSuggestions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastVisit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastVisitComment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Action)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Customer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MobileNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CheckNo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TableNo)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Outlet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserManager)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserStaff)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.QualityRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QualityComment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValueRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValueComment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceComment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmbienceRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmbienceComment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecommendRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecommendPoorArea)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecommendImprovements)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecommendSuggestions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastVisit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastVisitComment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Action)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CheckNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TableNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Outlet.OutletId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserManager.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserStaff.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SurveyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SurveyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SurveyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

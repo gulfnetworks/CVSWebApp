@@ -9,3 +9,14 @@ c:\users\gnetwork\source\repos\CVSWebApp\CVSWebApp\obj\Debug\netcoreapp2.0\CVSWe
 c:\users\gnetwork\source\repos\CVSWebApp\CVSWebApp\obj\Debug\netcoreapp2.0\CVSWebApp.AssemblyInfo.cs
 c:\users\gnetwork\source\repos\CVSWebApp\CVSWebApp\obj\Debug\netcoreapp2.0\CVSWebApp.dll
 c:\users\gnetwork\source\repos\CVSWebApp\CVSWebApp\obj\Debug\netcoreapp2.0\CVSWebApp.pdb
+D:\GITHUB\REPOSITORIES\CVSWebApp\CVSWebApp\bin\Debug\netcoreapp2.0\CVSWebApp.deps.json
+D:\GITHUB\REPOSITORIES\CVSWebApp\CVSWebApp\bin\Debug\netcoreapp2.0\CVSWebApp.runtimeconfig.json
+D:\GITHUB\REPOSITORIES\CVSWebApp\CVSWebApp\bin\Debug\netcoreapp2.0\CVSWebApp.runtimeconfig.dev.json
+D:\GITHUB\REPOSITORIES\CVSWebApp\CVSWebApp\bin\Debug\netcoreapp2.0\CVSWebApp.dll
+D:\GITHUB\REPOSITORIES\CVSWebApp\CVSWebApp\bin\Debug\netcoreapp2.0\CVSWebApp.pdb
+D:\GITHUB\REPOSITORIES\CVSWebApp\CVSWebApp\obj\Debug\netcoreapp2.0\CVSWebApp.csproj.CoreCompileInputs.cache
+D:\GITHUB\REPOSITORIES\CVSWebApp\CVSWebApp\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\GITHUB\REPOSITORIES\CVSWebApp\CVSWebApp\obj\Debug\netcoreapp2.0\CVSWebApp.AssemblyInfoInputs.cache
+D:\GITHUB\REPOSITORIES\CVSWebApp\CVSWebApp\obj\Debug\netcoreapp2.0\CVSWebApp.AssemblyInfo.cs
+D:\GITHUB\REPOSITORIES\CVSWebApp\CVSWebApp\obj\Debug\netcoreapp2.0\CVSWebApp.dll
+D:\GITHUB\REPOSITORIES\CVSWebApp\CVSWebApp\obj\Debug\netcoreapp2.0\CVSWebApp.pdb

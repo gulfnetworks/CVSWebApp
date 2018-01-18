@@ -5,6 +5,11 @@
     <UserSecretsId>aspnet-CVSWebApp-2084C482-43A0-41AC-AF0F-95CFC6359B11</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Controllers\ApplicationUserController.cs" />
+    <Compile Remove="Controllers\SurveysController.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />

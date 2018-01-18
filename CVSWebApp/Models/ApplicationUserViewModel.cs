@@ -18,5 +18,18 @@ namespace CVSWebApp.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+
+        [Required]
+        [Display(Name = "Role")]
+        public string UserRole { get; set; }
+
+        [Display(Name = "Company")]
+        public string CompanyName { get; set; }
+
+        [Required]
+        [EmailAddress]
+        [Display(Name = "User Name")]
+        public override string UserName { get; set; }
     }
 }

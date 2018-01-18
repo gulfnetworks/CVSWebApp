@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using CVSWebApp.Models;
 
+using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace CVSWebApp.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, UserRoleIntPK, int>
@@ -23,6 +26,17 @@ namespace CVSWebApp.Data
             // Add your customizations after calling base.OnModelCreating(builder);
         }
 
-        public DbSet<CVSWebApp.Models.ApplicationUser> ApplicationUser { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Outlet> Outlets { get; set; }
+        public DbSet<UserOutlet> UserOutlets { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Payment> Payments { get; set; }
+
+        public DbSet<SocialMedia> SocialMedias { get; set; }
+
+        public DbSet<CVSWebApp.Models.ResolutionLog> ResolutionLog { get; set; }
+
+        public DbSet<CVSWebApp.Models.Survey> Survey { get; set; }
     }
 }
